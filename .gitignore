@@ -1,0 +1,33 @@
+# Dependencias
+node_modules/
+*.log
+npm-debug.log*
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Entorno local
+.env
+.env.local
+.env.*.local
+
+# Build & dist
+dist/
+build/
+.cache/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

@@ -1,0 +1,26 @@
+/* Fuentes auto-alojadas: variables, recortadas al español.
+   No las edites a mano — se regeneran con:  python descargar-fuentes.py  */
+
+@font-face{
+  font-family:'Outfit';
+  font-style:normal;
+  font-weight:400 700;
+  font-display:swap;
+  src:url('../assets/fuentes/outfit-var.woff2') format('woff2');
+}
+
+@font-face{
+  font-family:'Playfair Display';
+  font-style:italic;
+  font-weight:400 700;
+  font-display:swap;
+  src:url('../assets/fuentes/playfair-italic-var.woff2') format('woff2');
+}
+
+@font-face{
+  font-family:'Playfair Display';
+  font-style:normal;
+  font-weight:700 900;
+  font-display:swap;
+  src:url('../assets/fuentes/playfair-var.woff2') format('woff2');
+}

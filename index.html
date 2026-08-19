@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Munay Suyu · Conjunto Folclórico — Un lugar de amor, hecho danza</title>
+<meta name="description" content="Munay Suyu es un conjunto folclórico chileno que preserva y difunde las raíces y tradiciones de nuestro Chile. Cuadros de Zona Norte y Zona Central para empresas, municipalidades, colegios y eventos.">
+<meta name="theme-color" content="#B31B24">
+<meta property="og:title" content="Munay Suyu · Conjunto Folclórico">
+<meta property="og:description" content="Un lugar de amor, hecho danza. Cuadros de Zona Norte y Zona Central.">
+<meta property="og:image" content="assets/img/grupo-oficial.jpg">
+<meta property="og:type" content="website">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="assets/img/logo-munay-suyu.jpg">
+
+<!-- Fuentes propias: sin conexiones a Google, sin bloqueo de terceros -->
+<link rel="preload" href="assets/fuentes/outfit-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fuentes/playfair-var.woff2" as="font" type="font/woff2" crossorigin>
+
+<!-- La foto de portada se pide de inmediato, en el tamaño que corresponda a la pantalla -->
+<link rel="preload" as="image" href="assets/img/grupo-oficial-800.webp"
+      imagesrcset="assets/img/grupo-oficial-480.webp 480w, assets/img/grupo-oficial-800.webp 800w"
+      imagesizes="(max-width:760px) 100vw, 566px">
+
+<link rel="stylesheet" href="css/fuentes.css">
+<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+<!-- ══════════ PRELOADER ══════════ -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__centro">
+    <div class="preloader__logo"><img src="assets/img/logo-munay-suyu-grande.webp" width="150" height="150" alt="Munay Suyu"></div>
+    <p class="preloader__lema">Un lugar de amor, hecho danza</p>
+    <div class="preloader__barra"><i></i></div>
+  </div>
+</div>
+
+<div class="progreso" id="progreso"></div>
+<canvas class="papelitos" id="papelitos" aria-hidden="true"></canvas>
+
+<!-- ══════════ NAV ══════════ -->
+<header class="nav" id="nav">
+  <a class="nav__marca" href="#inicio" aria-label="Munay Suyu, inicio">
+    <img src="assets/img/logo-munay-suyu-grande.webp" width="150" height="150" alt="" class="nav__logo">
+    <span class="nav__nombre">Munay&nbsp;Suyu</span>
+  </a>
+  <nav class="nav__links" id="navLinks">
+    <a href="#nosotros">Quiénes somos</a>
+    <a href="#cuadros">Nuestros cuadros</a>
+    <a href="#galeria">Galería</a>
+    <a href="#servicios">Contrátanos</a>
+    <a href="#postular">Postula</a>
+    <a class="btn btn--rojo btn--mini" href="#contacto" data-wa>Escríbenos</a>
+  </nav>
+  <button class="nav__burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false"><i></i><i></i><i></i></button>
+</header>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" id="inicio">
+  <div class="hero__guarda hero__guarda--sup" aria-hidden="true"></div>
+
+  <svg class="hero__cintas" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path class="cinta cinta--turquesa" d="M-60 250C220 120 430 400 700 300s520-260 780-90"/>
+    <path class="cinta cinta--rosa"      d="M-60 320C240 200 420 470 720 360s500-230 760-60"/>
+    <path class="cinta cinta--rojo"      d="M-60 700C260 830 440 560 760 660s480 210 760 60"/>
+    <path class="cinta cinta--oro"       d="M-60 770C280 890 460 630 780 720s460 190 740 40"/>
+  </svg>
+
+  <div class="hero__volantin" aria-hidden="true">
+    <div class="volantin"><span class="volantin__cola"></span></div>
+  </div>
+
+  <div class="hero__grid">
+    <div class="hero__texto">
+      <p class="hero__eyebrow"><i class="punto"></i> Conjunto folclórico · Chile</p>
+
+      <h1 class="hero__titulo" aria-label="Munay Suyu">
+        <span class="linea"><b>M</b><b>U</b><b>N</b><b>A</b><b>Y</b></span>
+        <span class="linea"><b>S</b><b>U</b><b>Y</b><b>U</b></span>
+      </h1>
+
+      <div class="hero__lema">
+        <span class="rombo"></span>
+        <p>Un lugar de amor, hecho danza</p>
+        <span class="rombo"></span>
+      </div>
+
+      <p class="hero__bajada">Preservamos y difundimos las raíces y tradiciones de nuestro hermoso Chile.
+        Dos cuadros en escena — <b>Zona Norte</b> y <b>Zona Central</b> — para empresas, municipalidades,
+        colegios y celebraciones.</p>
+
+      <div class="hero__botones">
+        <a class="btn btn--rojo" href="#servicios">
+          <span>Llévanos a tu evento</span>
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn--linea" href="#galeria">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <span>Ver al grupo</span>
+        </a>
+      </div>
+
+      <ul class="hero__datos">
+        <li><b data-contador="2">0</b><span>cuadros en escena</span></li>
+        <li><b data-contador="15">0</b><span>danzas de repertorio</span></li>
+        <li><b>100%</b><span>folclor chileno</span></li>
+      </ul>
+    </div>
+
+    <div class="hero__foto">
+      <div class="marco" id="marcoHero">
+        <div class="marco__esquina marco__esquina--tl"></div>
+        <div class="marco__esquina marco__esquina--tr"></div>
+        <div class="marco__esquina marco__esquina--bl"></div>
+        <div class="marco__esquina marco__esquina--br"></div>
+        <!-- Se corta en 800px a propósito: la foto se muestra a 566px como
+             máximo, y la de 1008px pesaba 230KB para una nitidez que nadie
+             alcanza a notar. Así la portada se pide una sola vez. -->
+        <img src="assets/img/grupo-oficial-800.webp"
+             srcset="assets/img/grupo-oficial-480.webp 480w, assets/img/grupo-oficial-800.webp 800w"
+             sizes="(max-width:760px) 100vw, 566px"
+             width="1008" height="570" fetchpriority="high" decoding="async"
+             alt="Integrantes de Munay Suyu con vestuario de la Zona Central: vestidos floreados, chamantos y chupallas.">
+        <div class="marco__brillo"></div>
+      </div>
+
+      <div class="sello" aria-hidden="true">
+        <svg viewBox="0 0 200 200">
+          <defs><path id="circuloTexto" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
+          <text><textPath href="#circuloTexto">MUNAY SUYU ✦ FOLCLOR CHILENO ✦ NORTE Y CENTRO ✦ </textPath></text>
+        </svg>
+        <div class="sello__centro">♥</div>
+      </div>
+    </div>
+  </div>
+
+  <a class="hero__scroll" href="#nosotros" aria-label="Bajar">
+    <span></span><i></i>
+  </a>
+</section>
+
+<!-- ══════════ MARQUESINA ══════════ -->
+<div class="marquesina" aria-hidden="true">
+  <div class="marquesina__pista">
+    <span>Cueca<i>✦</i>Trote<i>✦</i>Huayno<i>✦</i>Cachimbo<i>✦</i>Sajuriana<i>✦</i>Saya<i>✦</i>Refalosa<i>✦</i>Cueca nortina<i>✦</i>Carnavalito<i>✦</i>Vals criollo<i>✦</i>Tobas<i>✦</i>El Gato<i>✦</i></span>
+    <span>Cueca<i>✦</i>Trote<i>✦</i>Huayno<i>✦</i>Cachimbo<i>✦</i>Sajuriana<i>✦</i>Saya<i>✦</i>Refalosa<i>✦</i>Cueca nortina<i>✦</i>Carnavalito<i>✦</i>Vals criollo<i>✦</i>Tobas<i>✦</i>El Gato<i>✦</i></span>
+  </div>
+</div>
+
+<!-- ══════════ NOSOTROS ══════════ -->
+<section class="seccion seccion--crema" id="nosotros">
+  <div class="contenedor">
+    <header class="titulo" data-animar>
+      <p class="titulo__eyebrow">Quiénes somos</p>
+      <h2 class="titulo__h2">Munay <em>Suyu</em></h2>
+      <div class="titulo__guarda"></div>
+    </header>
+
+    <div class="nosotros">
+      <div class="nosotros__collage" data-animar>
+        <figure class="collage collage--a"><img src="assets/img/centro-pareja-480.webp"
+             srcset="assets/img/centro-pareja-480.webp 480w,
+                     assets/img/centro-pareja-grande.webp 640w"
+             sizes="(max-width:760px) 46vw, 300px"
+             width="640" height="640" loading="lazy" decoding="async"
+             alt="Pareja de Munay Suyu bailando cueca."></figure>
+        <figure class="collage collage--b"><img src="assets/img/norte-bailarina-480.webp"
+             srcset="assets/img/norte-bailarina-480.webp 480w,
+                     assets/img/norte-bailarina-grande.webp 640w"
+             sizes="(max-width:760px) 46vw, 240px"
+             width="640" height="640" loading="lazy" decoding="async"
+             alt="Bailarina de Munay Suyu con vestuario del norte."></figure>
+        <figure class="collage collage--c"><img src="assets/img/escenario-480.webp"
+             srcset="assets/img/escenario-480.webp 480w,
+                     assets/img/escenario-grande.webp 640w"
+             sizes="(max-width:760px) 46vw, 270px"
+             width="640" height="640" loading="lazy" decoding="async"
+             alt="Munay Suyu sobre el escenario."></figure>
+        <div class="collage__nota">
+          <b>Munay</b> · amar, querer<br>
+          <b>Suyu</b> · territorio, región
+          <i>del quechua</i>
+        </div>
+      </div>
+
+      <div class="nosotros__texto">
+        <p class="destacado" data-animar>Nacimos de las ganas de un grupo de amigos por bailar lo nuestro y no dejar que se apagara.</p>
+
+        <p data-animar>Somos un <b>conjunto folclórico chileno</b>. Ensayamos, viajamos y nos subimos al escenario
+        con una sola idea: que el folclor no se quede guardado en los libros ni en el 18 de septiembre.
+        Por eso nuestro nombre — <b>un lugar de amor</b> — porque antes que un grupo de danza, somos gente
+        que se junta a querer lo propio.</p>
+
+        <p data-animar>Hoy trabajamos <b>dos cuadros</b>: la <b>Zona Norte</b>, con sus polleras bordadas, aguayos
+        y el pulso del altiplano; y la <b>Zona Central</b>, con la cueca, los vestidos floreados, el chamanto y la
+        chupalla. Cada uno con su vestuario completo, su música y su puesta en escena.</p>
+
+        <ul class="lista-check">
+          <li data-animar><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg> Vestuario completo y propio para cada zona</li>
+          <li data-animar><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg> Puestas en escena de 15 a 45 minutos</li>
+          <li data-animar><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg> Nos movemos a tu comuna, plaza, colegio o empresa</li>
+          <li data-animar><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg> Presentación, taller o animación de fonda</li>
+        </ul>
+
+        <a class="btn btn--rojo" href="#contacto" data-animar data-wa>
+          <svg viewBox="0 0 24 24" class="ico-wa"><path d="M20.5 3.5A11.9 11.9 0 0 0 3.2 18.9L2 22.5l3.7-1.2A11.9 11.9 0 1 0 20.5 3.5z"/></svg>
+          <span>Conversemos por WhatsApp</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="linea-tiempo" data-animar>
+      <div class="linea-tiempo__riel"><i id="rielRelleno"></i></div>
+      <ol>
+        <li data-animar><b>El origen</b><span>Un grupo de amigos con ganas de bailar lo nuestro.</span></li>
+        <li data-animar><b>El primer cuadro</b><span>Zona Central: cueca, vestido floreado, chamanto y chupalla.</span></li>
+        <li data-animar><b>Se suma el Norte</b><span>Polleras bordadas, aguayos y el pulso del altiplano.</span></li>
+        <li data-animar><b>Hoy</b><span>Escenarios, plazas, colegios, empresas y municipios.</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CUADROS ══════════ -->
+<section class="seccion seccion--oscura" id="cuadros">
+  <div class="textura" aria-hidden="true"></div>
+  <div class="contenedor">
+    <header class="titulo titulo--claro" data-animar>
+      <p class="titulo__eyebrow">Nuestros cuadros</p>
+      <h2 class="titulo__h2">Norte y <em>Centro</em></h2>
+      <div class="titulo__guarda"></div>
+      <p class="titulo__bajada">Dos territorios, dos vestuarios, dos maneras de mover el cuerpo. Toca el mapa.</p>
+    </header>
+
+    <div class="cuadros">
+      <div class="cuadros__mapa" data-animar>
+        <svg viewBox="0 0 150 640" class="mapa" aria-label="Mapa estilizado de Chile">
+          <defs>
+            <clipPath id="recorteChile">
+              <path d="M70 10 L86 30 L90 64 L98 100 L96 144 L104 182 L100 224 L106 266 L98 304 L102 346 L92 384 L96 424 L86 462 L88 500 L76 534 L74 564 L66 594 L56 616 L50 592 L56 560 L52 524 L60 490 L54 456 L62 420 L56 384 L64 348 L58 310 L66 272 L60 234 L68 196 L62 158 L70 120 L64 78 Z"/>
+            </clipPath>
+            <linearGradient id="gNorte" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#E9548A"/><stop offset="45%" stop-color="#E88A33"/><stop offset="100%" stop-color="#22B3AE"/>
+            </linearGradient>
+            <linearGradient id="gCentro" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#E4B95C"/><stop offset="55%" stop-color="#E8622F"/><stop offset="100%" stop-color="#B31B24"/>
+            </linearGradient>
+          </defs>
+          <g clip-path="url(#recorteChile)">
+            <rect x="0" y="0" width="150" height="640" fill="#2a201c"/>
+            <rect class="zona zona--norte"  data-zona="norte"  x="0" y="0"   width="150" height="215" fill="url(#gNorte)"/>
+            <rect class="zona zona--centro" data-zona="centro" x="0" y="215" width="150" height="185" fill="url(#gCentro)"/>
+            <rect class="zona zona--otras" x="0" y="400" width="150" height="240" fill="#4a3a33"/>
+          </g>
+          <path class="mapa__borde" d="M70 10 L86 30 L90 64 L98 100 L96 144 L104 182 L100 224 L106 266 L98 304 L102 346 L92 384 L96 424 L86 462 L88 500 L76 534 L74 564 L66 594 L56 616 L50 592 L56 560 L52 524 L60 490 L54 456 L62 420 L56 384 L64 348 L58 310 L66 272 L60 234 L68 196 L62 158 L70 120 L64 78 Z"/>
+          <g class="mapa__pines">
+            <g class="pin pin--norte"  data-zona="norte"><circle cx="82" cy="105" r="7"/><circle cx="82" cy="105" r="16" class="pulso"/></g>
+            <g class="pin pin--centro" data-zona="centro"><circle cx="80" cy="300" r="7"/><circle cx="80" cy="300" r="16" class="pulso"/></g>
+          </g>
+          <text class="mapa__etq" x="118" y="108" data-zona="norte">NORTE</text>
+          <text class="mapa__etq" x="116" y="303" data-zona="centro">CENTRO</text>
+        </svg>
+      </div>
+
+      <div class="cuadros__panel">
+        <div class="tabs" role="tablist" data-animar>
+          <button class="tab activa" role="tab" data-zona="norte"  aria-selected="true">Zona Norte</button>
+          <button class="tab"        role="tab" data-zona="centro" aria-selected="false">Zona Central</button>
+        </div>
+
+        <article class="zona-panel activa" data-panel="norte">
+          <div class="zona-panel__foto">
+            <img src="assets/img/grupo-norte-480.webp"
+             srcset="assets/img/grupo-norte-480.webp 480w,
+                     assets/img/grupo-norte-grande.webp 640w"
+             sizes="(max-width:760px) 100vw, 880px"
+             width="640" height="480" loading="lazy" decoding="async"
+             alt="Cuadro Zona Norte de Munay Suyu con polleras negras bordadas, aguayos y sombreros.">
+            <span class="etiqueta etiqueta--norte">Cuadro Norte</span>
+          </div>
+          <h3>El pulso del altiplano</h3>
+          <p>Color, pompones y percusión. El cuadro norte trae la fiesta de la pampa y el altiplano:
+             polleras bordadas, aguayos tejidos, fajas de colores y sombreros. Es el cuadro que levanta
+             al público de la silla.</p>
+          <p class="mini-titulo">Danzas</p>
+          <ul class="chips">
+            <li>Trote</li><li>Huayno</li><li>Cachimbo</li><li>Cueca nortina</li>
+            <li>Saya</li><li>Tobas</li><li>Carnavalito</li>
+          </ul>
+          <p class="mini-titulo">Vestuario</p>
+          <ul class="chips chips--suave">
+            <li>Pollera bordada</li><li>Aguayo</li><li>Faja tejida</li><li>Pompones</li><li>Sombrero</li><li>Pañuelo</li>
+          </ul>
+        </article>
+
+        <article class="zona-panel" data-panel="centro">
+          <div class="zona-panel__foto">
+            <img src="assets/img/huasos-480.webp"
+             srcset="assets/img/huasos-480.webp 480w,
+                     assets/img/huasos-grande.webp 640w"
+             sizes="(max-width:760px) 100vw, 880px"
+             width="640" height="640" loading="lazy" decoding="async"
+             alt="Cuadro Zona Central de Munay Suyu con chamantos, chupallas y vestidos floreados.">
+            <span class="etiqueta etiqueta--centro">Cuadro Central</span>
+          </div>
+          <h3>Pañuelo al aire</h3>
+          <p>El corazón del folclor chileno. Cueca de pareja, zapateo y escobillado, vestido floreado con
+             enaguas, delantal y trenzas con cintas; chamanto, chupalla, faja y espuela. El cuadro del
+             18 de septiembre.</p>
+          <p class="mini-titulo">Danzas</p>
+          <ul class="chips">
+            <li>Cueca</li><li>Sajuriana</li><li>Refalosa</li><li>Corrido</li>
+            <li>Vals criollo</li><li>Polka</li><li>El Gato</li><li>Cuándo</li>
+          </ul>
+          <p class="mini-titulo">Vestuario</p>
+          <ul class="chips chips--suave">
+            <li>Vestido floreado</li><li>Enaguas</li><li>Delantal</li><li>Chamanto</li><li>Chupalla</li><li>Espuela</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ GALERÍA ══════════ -->
+<section class="seccion seccion--crema" id="galeria">
+  <div class="contenedor">
+    <header class="titulo" data-animar>
+      <p class="titulo__eyebrow">Galería</p>
+      <h2 class="titulo__h2">Así nos <em>vemos</em></h2>
+      <div class="titulo__guarda"></div>
+    </header>
+
+    <div class="filtros" data-animar>
+      <button class="filtro activa" data-filtro="todo">Todo</button>
+      <button class="filtro" data-filtro="norte">Norte</button>
+      <button class="filtro" data-filtro="centro">Centro</button>
+      <button class="filtro" data-filtro="video">Videos</button>
+    </div>
+
+    <div class="galeria" id="galeriaGrid"></div>
+
+    <div class="galeria__redes" data-animar>
+      <p>Subimos ensayos, viajes y presentaciones cada semana.</p>
+      <div class="galeria__botones">
+        <a class="btn btn--linea" href="https://www.instagram.com/munay.suyu" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+          <span>@munay.suyu</span>
+        </a>
+        <a class="btn btn--linea" href="https://www.tiktok.com/@munay.suyu" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.6 2.6 2.4 4.2 5 4.4"/></svg>
+          <span>TikTok</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SERVICIOS ══════════ -->
+<section class="seccion seccion--oscura" id="servicios">
+  <div class="textura" aria-hidden="true"></div>
+  <div class="guirnalda" aria-hidden="true"></div>
+  <div class="contenedor">
+    <header class="titulo titulo--claro" data-animar>
+      <p class="titulo__eyebrow">Contrátanos</p>
+      <h2 class="titulo__h2">Llévanos a tu <em>evento</em></h2>
+      <div class="titulo__guarda"></div>
+      <p class="titulo__bajada">Nos presentamos con vestuario completo, música y puesta en escena. Elige y escríbenos.</p>
+    </header>
+
+    <div class="servicios" id="servicios-grid"></div>
+
+    <div class="llamado" data-animar>
+      <div class="llamado__texto">
+        <h3>¿Fiestas patrias en tu empresa o municipio?</h3>
+        <p>Septiembre se agenda temprano. Cuéntanos fecha, lugar y cuánta gente esperan, y te respondemos con una propuesta.</p>
+      </div>
+      <a class="btn btn--oro btn--grande" href="#contacto" data-wa>
+        <svg viewBox="0 0 24 24" class="ico-wa"><path d="M20.5 3.5A11.9 11.9 0 0 0 3.2 18.9L2 22.5l3.7-1.2A11.9 11.9 0 1 0 20.5 3.5z"/></svg>
+        <span>Pedir propuesta</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ POSTULAR ══════════ -->
+<section class="seccion seccion--postular" id="postular">
+  <div class="contenedor contenedor--angosto">
+    <header class="titulo" data-animar>
+      <p class="titulo__eyebrow">Postula al grupo</p>
+      <h2 class="titulo__h2">¿Quieres <em>bailar</em> con nosotros?</h2>
+      <div class="titulo__guarda"></div>
+      <p class="titulo__bajada">No necesitas experiencia previa. Completa esto y el mensaje llega directo al WhatsApp del grupo.</p>
+    </header>
+
+    <form class="formulario" id="formPostular" data-animar novalidate>
+      <div class="campo">
+        <label for="f-nombre">Nombre y apellido *</label>
+        <input id="f-nombre" name="nombre" type="text" required placeholder="Ej: Camila Rojas">
+      </div>
+      <div class="fila">
+        <div class="campo">
+          <label for="f-edad">Edad</label>
+          <input id="f-edad" name="edad" type="number" min="5" max="99" placeholder="Ej: 24">
+        </div>
+        <div class="campo">
+          <label for="f-comuna">Comuna</label>
+          <input id="f-comuna" name="comuna" type="text" placeholder="Ej: Maipú">
+        </div>
+      </div>
+      <div class="campo">
+        <label for="f-cuadro">¿Qué cuadro te llama más?</label>
+        <select id="f-cuadro" name="cuadro">
+          <option>Los dos</option>
+          <option>Zona Norte</option>
+          <option>Zona Central</option>
+          <option>Todavía no sé</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="f-exp">¿Has bailado folclor antes?</label>
+        <select id="f-exp" name="experiencia">
+          <option>Nunca, parto de cero</option>
+          <option>Algo en el colegio</option>
+          <option>Sí, en otro conjunto</option>
+          <option>Bailo hace años</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="f-msg">Cuéntanos algo de ti</label>
+        <textarea id="f-msg" name="mensaje" rows="4" placeholder="Por qué te gustaría entrar, disponibilidad para ensayar..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn--rojo btn--grande btn--full">
+        <svg viewBox="0 0 24 24" class="ico-wa"><path d="M20.5 3.5A11.9 11.9 0 0 0 3.2 18.9L2 22.5l3.7-1.2A11.9 11.9 0 1 0 20.5 3.5z"/></svg>
+        <span>Enviar por WhatsApp</span>
+      </button>
+      <p class="formulario__nota">Se abre WhatsApp con el mensaje ya escrito. Tú aprietas enviar.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ══════════ CONTACTO / FOOTER ══════════ -->
+<footer class="pie" id="contacto">
+  <div class="pie__guarda" aria-hidden="true"></div>
+  <div class="contenedor">
+    <div class="pie__grid">
+      <div class="pie__marca">
+        <img src="assets/img/logo-munay-suyu-grande.webp" width="150" height="150" loading="lazy" alt="Logo Munay Suyu" class="pie__logo">
+        <p class="pie__lema">Un lugar de amor, hecho danza</p>
+        <p class="pie__bio">Conjunto folclórico. Preservamos y difundimos las raíces y tradiciones de nuestro hermoso Chile.</p>
+      </div>
+
+      <div class="pie__col">
+        <p class="mini-titulo">Navega</p>
+        <a href="#nosotros">Quiénes somos</a>
+        <a href="#cuadros">Nuestros cuadros</a>
+        <a href="#galeria">Galería</a>
+        <a href="#servicios">Contrátanos</a>
+        <a href="#postular">Postula</a>
+      </div>
+
+      <div class="pie__col">
+        <p class="mini-titulo">Escríbenos</p>
+        <a class="pie__contacto" href="#" data-wa>
+          <svg viewBox="0 0 24 24" class="ico-wa"><path d="M20.5 3.5A11.9 11.9 0 0 0 3.2 18.9L2 22.5l3.7-1.2A11.9 11.9 0 1 0 20.5 3.5z"/></svg>
+          <span id="waTexto">WhatsApp del grupo</span>
+        </a>
+        <a class="pie__contacto" href="https://www.instagram.com/munay.suyu" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+          <span>@munay.suyu</span>
+        </a>
+        <a class="pie__contacto" href="https://www.tiktok.com/@munay.suyu" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.6 2.6 2.4 4.2 5 4.4"/></svg>
+          <span>@munay.suyu</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="pie__abajo">
+      <p>© <span id="anio"></span> Munay Suyu · Conjunto Folclórico · Chile</p>
+      <a href="#inicio" class="pie__arriba">Volver arriba ↑</a>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-flotante" href="#" data-wa aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M20.5 3.5A11.9 11.9 0 0 0 3.2 18.9L2 22.5l3.7-1.2A11.9 11.9 0 1 0 20.5 3.5z"/></svg>
+  <i class="wa-flotante__pulso"></i>
+</a>
+
+<!-- ══════════ LIGHTBOX ══════════ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+  <button class="lightbox__cerrar" id="lbCerrar" aria-label="Cerrar">&times;</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Anterior">&#8249;</button>
+  <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Siguiente">&#8250;</button>
+  <figure class="lightbox__caja"><div id="lbMedio"></div><figcaption id="lbTexto"></figcaption></figure>
+</div>
+
+<script src="js/contenido.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
