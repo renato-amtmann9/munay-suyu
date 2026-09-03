@@ -64,7 +64,29 @@ const CONTENIDO = {
   videos: [],
 
   /* ─────────────────────────────────────────────────────────
-     5) SERVICIOS
+     5) PRESENTACIONES
+     Va en orden cronológico. Las que comparten fecha (mismo "dia"
+     y "mes") se agrupan solas bajo un mismo encabezado de fecha.
+     ───────────────────────────────────────────────────────── */
+  presentaciones: [
+    { dia:"4",  mes:"Septiembre", diaSemana:"Viernes",   hora:"12:00", lugar:"CESFAM" },
+    { dia:"4",  mes:"Septiembre", diaSemana:"Viernes",   hora:"18:30", lugar:"Biblioteca Paul Harris" },
+    { dia:"4",  mes:"Septiembre", diaSemana:"Viernes",   hora:"19:00", lugar:"Comunitario Rotonda Atenas" },
+    { dia:"5",  mes:"Septiembre", diaSemana:"Sábado",    hora:"14:00", lugar:"Biblioteca Paul Harris" },
+    { dia:"5",  mes:"Septiembre", diaSemana:"Sábado",    hora:"22:00", lugar:"Biblioteca Paul Harris" },
+    { dia:"13", mes:"Septiembre", diaSemana:"Domingo",   hora:"15:00", lugar:"Isabel La Católica #4158" },
+    { dia:"15", mes:"Septiembre", diaSemana:"Martes",    hora:"17:30", lugar:"Av. Simón Bolívar #3747" },
+    { dia:"16", mes:"Septiembre", diaSemana:"Miércoles", hora:"14:00", lugar:"SAR La Reina" },
+    { dia:"16", mes:"Septiembre", diaSemana:"Miércoles", hora:"3:30",  lugar:"Camino Las Flores 10126" },
+    { dia:"17", mes:"Septiembre", diaSemana:"Jueves",    hora:"16:30", lugar:"Intercomunal" },
+    { dia:"20", mes:"Septiembre", diaSemana:"Domingo",   hora:"18:00", lugar:"Intercomunal" },
+    { dia:"24", mes:"Septiembre", diaSemana:"Jueves",    hora:"18:00", lugar:"Las Condesas" },
+    { dia:"25", mes:"Septiembre", diaSemana:"Viernes",   hora:"17:30", lugar:"Comunitario Patricia" },
+    { dia:"25", mes:"Septiembre", diaSemana:"Viernes",   hora:"18:30", lugar:"Comunitario Diaguitas" }
+  ],
+
+  /* ─────────────────────────────────────────────────────────
+     6) SERVICIOS
      ───────────────────────────────────────────────────────── */
   servicios: [
     {

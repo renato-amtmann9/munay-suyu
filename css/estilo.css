@@ -448,6 +448,44 @@ svg{ fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; strok
 .chips li:hover{ background:var(--rojo); border-color:var(--rojo); transform:translateY(-3px); }
 .chips--suave li{ border-style:dashed; color:rgba(247,239,226,.8); }
 .chips--suave li:hover{ background:var(--oro); border-color:var(--oro); color:var(--tinta); }
+
+/* ═══════════════════════════════════════════════════════════
+   PRESENTACIONES
+   ═══════════════════════════════════════════════════════════ */
+.presentaciones{ display:flex; flex-direction:column; }
+.presentaciones__grupo{
+  display:grid; grid-template-columns:112px 1fr; gap:26px; align-items:start;
+  padding:26px 0;
+}
+.presentaciones__grupo:first-child{ padding-top:0; }
+.presentaciones__grupo + .presentaciones__grupo{ border-top:1px dashed rgba(179,27,36,.2); }
+.presentaciones__fecha{ display:flex; align-items:center; gap:12px; position:sticky; top:calc(var(--nav-h) + 24px); }
+.presentaciones__dia{ font-family:var(--display); font-size:2.7rem; font-weight:900; line-height:1; color:var(--rojo); }
+.presentaciones__fecha div{ display:grid; }
+.presentaciones__fecha strong{ font-size:13px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--tinta); }
+.presentaciones__fecha small{ margin-top:3px; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--tinta-2); }
+.presentaciones__tarjetas{ display:grid; grid-template-columns:repeat(auto-fill,minmax(228px,1fr)); gap:14px; }
+
+.func{
+  position:relative; padding:20px 20px 18px; border-radius:14px; overflow:hidden;
+  background:var(--papel); border:1px solid rgba(179,27,36,.12);
+  box-shadow:0 14px 30px -18px rgba(42,26,21,.35);
+  transition:transform .35s cubic-bezier(.2,.9,.25,1), box-shadow .35s, border-color .35s;
+}
+.func:hover{ transform:translateY(-5px); box-shadow:0 20px 40px -18px rgba(42,26,21,.42); border-color:rgba(179,27,36,.3); }
+.func::before{ content:""; position:absolute; left:0; right:0; top:0; height:4px; background:var(--rojo); }
+.func--turquesa::before{ background:var(--turquesa); }
+.func--oro::before{ background:var(--oro); }
+.func--rosa::before{ background:var(--rosa); }
+.func__top{ display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; }
+.func__hora{ font-family:var(--display); font-size:1.3rem; font-weight:900; color:var(--tinta); }
+.func__ico{ color:var(--rojo); font-size:13px; }
+.func--turquesa .func__ico{ color:var(--turquesa); }
+.func--oro .func__ico{ color:var(--oro); }
+.func--rosa .func__ico{ color:var(--rosa); }
+.func h3{ margin:0; font-family:var(--display); font-size:1.05rem; font-weight:700; line-height:1.32; color:var(--tinta); }
+.func__tag{ display:inline-block; margin-top:10px; font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--tinta-2); }
+
 /* ═══════════════════════════════════════════════════════════
    GALERÍA
    ═══════════════════════════════════════════════════════════ */
@@ -724,6 +762,11 @@ svg{ fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; strok
   .tab{ width:100%; padding:13px 14px; font-size:14.5px; }
   .zona-panel{ grid-column:1 / -1; grid-row:2; }
   .zona-panel__foto{ border-width:4px; }
+
+  /* ── PRESENTACIONES: la fecha pasa arriba de sus tarjetas ── */
+  .presentaciones__grupo{ grid-template-columns:1fr; gap:12px; }
+  .presentaciones__fecha{ position:relative; top:auto; }
+  .presentaciones__tarjetas{ grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); }
 
   /* ── GALERÍA: una columna a ancho completo y textos siempre visibles ── */
   /* en una sola columna el multicolumna no aporta y deja aire a los lados */

@@ -384,6 +384,41 @@ mostrarZona("norte");
   pintar("todo");
 })();
 
+/* ═══════ 12b · PRESENTACIONES ═══════ */
+(function presentaciones(){
+  const cont = $("#presentacionesGrid");
+  if (!cont) return;
+
+  const acentos = ["", " func--turquesa", " func--oro", " func--rosa"];
+  let html = "", grupoActual = null, i = 0;
+
+  CONTENIDO.presentaciones.forEach(p => {
+    const clave = p.dia + "-" + p.mes;
+    if (clave !== grupoActual){
+      if (grupoActual !== null) html += "</div></div>";
+      html +=
+        '<div class="presentaciones__grupo" data-animar>' +
+          '<div class="presentaciones__fecha">' +
+            '<span class="presentaciones__dia">' + p.dia + '</span>' +
+            '<div><strong>' + p.diaSemana + '</strong><small>' + p.mes + '</small></div>' +
+          '</div>' +
+          '<div class="presentaciones__tarjetas">';
+      grupoActual = clave;
+    }
+    html +=
+      '<article class="func' + acentos[i % acentos.length] + '">' +
+        '<div class="func__top"><span class="func__hora">' + p.hora + ' hrs</span><span class="func__ico">✦</span></div>' +
+        '<h3>' + p.lugar + '</h3>' +
+        '<span class="func__tag">Función de folclor</span>' +
+      '</article>';
+    i++;
+  });
+  if (grupoActual !== null) html += "</div></div>";
+
+  cont.innerHTML = html;
+  observar();
+})();
+
 /* ═══════ 13 · SERVICIOS ═══════ */
 (function servicios(){
   const grid = $("#servicios-grid");
