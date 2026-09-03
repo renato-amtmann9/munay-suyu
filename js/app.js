@@ -475,8 +475,8 @@ if (window.IntersectionObserver && !menosMovimiento){
     entradas.forEach(e => e.target.classList.toggle("pausa", !e.isIntersecting));
   }, { rootMargin: "150px" });
 
-  $$(".marquesina__pista, .guirnalda, .sello, .volantin, .marco__brillo, " +
-     ".hero__cintas, .collage__nota, .punto, .wa-flotante__pulso")
+  $$(".marquesina__pista, .guirnalda, .sello, .marco__brillo, " +
+     ".collage__nota, .punto, .wa-flotante__pulso")
     .forEach(el => obsAnim.observe(el));
 }
 

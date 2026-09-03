@@ -61,17 +61,6 @@
 <section class="hero" id="inicio">
   <div class="hero__guarda hero__guarda--sup" aria-hidden="true"></div>
 
-  <svg class="hero__cintas" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-    <path class="cinta cinta--turquesa" d="M-60 250C220 120 430 400 700 300s520-260 780-90"/>
-    <path class="cinta cinta--rosa"      d="M-60 320C240 200 420 470 720 360s500-230 760-60"/>
-    <path class="cinta cinta--rojo"      d="M-60 700C260 830 440 560 760 660s480 210 760 60"/>
-    <path class="cinta cinta--oro"       d="M-60 770C280 890 460 630 780 720s460 190 740 40"/>
-  </svg>
-
-  <div class="hero__volantin" aria-hidden="true">
-    <div class="volantin"><span class="volantin__cola"></span></div>
-  </div>
-
   <div class="hero__grid">
     <div class="hero__texto">
       <h1 class="hero__titulo" aria-label="Munay Suyu">
@@ -90,7 +79,7 @@
         colegios y celebraciones.</p>
 
       <div class="hero__botones">
-        <div class="hero__accion hero__accion--evento">
+        <div class="hero__accion">
           <p class="hero__accion-frase">¿Tienes una celebración?</p>
           <a class="btn btn--evento" href="#servicios">
             <span>Llévanos a tu evento</span>
@@ -100,8 +89,7 @@
             </svg>
           </a>
         </div>
-
-        <div class="hero__accion hero__accion--entradas">
+        <div class="hero__accion">
           <p class="hero__accion-frase">Revisa nuestro calendario</p>
           <a class="btn btn--entradas" href="#presentaciones">
             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -112,17 +100,17 @@
             <span>Próximas presentaciones</span>
           </a>
         </div>
+      </div>
 
-        <div class="hero__accion hero__accion--conoce">
-          <p class="hero__accion-frase">Música, baile y tradición</p>
-          <a class="btn btn--conoce" href="#galeria">
-            <span class="btn__mancha">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.3c4.8-.8 9.8 3.8 9 9.3.9 5.6-4.5 10-9.6 8.9-5.4 1-9.3-3.6-8.4-9-.9-5.3 4.3-10 9-9.2z"/></svg>
-              <svg class="btn__play" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.3 7.4l8.3 4.6-8.3 4.6z"/></svg>
-            </span>
-            <span>Conoce al grupo</span>
-          </a>
-        </div>
+      <div class="hero__accion hero__conoce-wrap">
+        <p class="hero__accion-frase">Música, baile y tradición</p>
+        <a class="btn btn--conoce hero__conoce" href="#galeria">
+          <span class="btn__mancha">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.3c4.8-.8 9.8 3.8 9 9.3.9 5.6-4.5 10-9.6 8.9-5.4 1-9.3-3.6-8.4-9-.9-5.3 4.3-10 9-9.2z"/></svg>
+            <svg class="btn__play" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.3 7.4l8.3 4.6-8.3 4.6z"/></svg>
+          </span>
+          <span>Conoce al grupo</span>
+        </a>
       </div>
 
       <ul class="hero__datos">
@@ -134,10 +122,10 @@
 
     <div class="hero__foto">
       <div class="marco" id="marcoHero">
-        <div class="marco__esquina marco__esquina--tl"></div>
-        <div class="marco__esquina marco__esquina--tr"></div>
-        <div class="marco__esquina marco__esquina--bl"></div>
-        <div class="marco__esquina marco__esquina--br"></div>
+        <div class="marco__esquina marco__esquina--tl" aria-hidden="true"></div>
+        <div class="marco__esquina marco__esquina--tr" aria-hidden="true"></div>
+        <div class="marco__esquina marco__esquina--bl" aria-hidden="true"></div>
+        <div class="marco__esquina marco__esquina--br" aria-hidden="true"></div>
         <!-- Se corta en 800px a propósito: la foto se muestra a 566px como
              máximo, y la de 1008px pesaba 230KB para una nitidez que nadie
              alcanza a notar. Así la portada se pide una sola vez. -->
