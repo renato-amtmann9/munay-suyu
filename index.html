@@ -90,18 +90,39 @@
         colegios y celebraciones.</p>
 
       <div class="hero__botones">
-        <a class="btn btn--rojo" href="#servicios">
-          <span>Llévanos a tu evento</span>
-          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a class="btn btn--oro" href="#presentaciones">
-          <svg viewBox="0 0 24 24"><path d="M8 3v4M16 3v4M4 9h16M5 7h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z"/></svg>
-          <span>Nuestras presentaciones</span>
-        </a>
-        <a class="btn btn--linea" href="#galeria">
-          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          <span>Ver al grupo</span>
-        </a>
+        <div class="hero__accion hero__accion--evento">
+          <p class="hero__accion-frase">¿Tienes una celebración?</p>
+          <a class="btn btn--evento" href="#servicios">
+            <span>Llévanos a tu evento</span>
+            <svg class="btn__flecha" viewBox="0 0 34 20" aria-hidden="true">
+              <path d="M2 12c8-2.5 16 1 24-2"/>
+              <path d="M16.5 4c3 2 7.5 5 9 8-3 2-7 6-10.5 7.5"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="hero__accion hero__accion--entradas">
+          <p class="hero__accion-frase">Revisa nuestro calendario</p>
+          <a class="btn btn--entradas" href="#presentaciones">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 8.5c4-1 12-1 16 0v9.5c-4 1-12 1-16 0z"/>
+              <path d="M8 4v5M16 4v5"/>
+              <path d="M4.5 13.2c3.8-.6 11.2-.6 15 0" stroke-dasharray="1.5 3.4"/>
+            </svg>
+            <span>Próximas presentaciones</span>
+          </a>
+        </div>
+
+        <div class="hero__accion hero__accion--conoce">
+          <p class="hero__accion-frase">Música, baile y tradición</p>
+          <a class="btn btn--conoce" href="#galeria">
+            <span class="btn__mancha">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.3c4.8-.8 9.8 3.8 9 9.3.9 5.6-4.5 10-9.6 8.9-5.4 1-9.3-3.6-8.4-9-.9-5.3 4.3-10 9-9.2z"/></svg>
+              <svg class="btn__play" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.3 7.4l8.3 4.6-8.3 4.6z"/></svg>
+            </span>
+            <span>Conoce al grupo</span>
+          </a>
+        </div>
       </div>
 
       <ul class="hero__datos">
