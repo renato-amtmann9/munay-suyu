@@ -16,4 +16,4 @@ User-agent: Bingbot
 Allow: /
 
 # Sitemap
-Sitemap: https://munaysuyu.cl/sitemap.xml
+Sitemap: https://www.munaysuyu.cl/sitemap.xml

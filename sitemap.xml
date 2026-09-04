@@ -3,47 +3,47 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <!-- Página principal -->
   <url>
-    <loc>https://munaysuyu.cl</loc>
+    <loc>https://www.munaysuyu.cl</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://munaysuyu.cl/assets/img/grupo-oficial.jpg</image:loc>
+      <image:loc>https://www.munaysuyu.cl/assets/img/grupo-oficial.jpg</image:loc>
       <image:title>Munay Suyu - Grupo Folclórico Chileno</image:title>
     </image:image>
   </url>
   
   <!-- Sección Quiénes somos -->
   <url>
-    <loc>https://munaysuyu.cl#nosotros</loc>
+    <loc>https://www.munaysuyu.cl#nosotros</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://munaysuyu.cl/assets/img/centro-pareja-grande.webp</image:loc>
+      <image:loc>https://www.munaysuyu.cl/assets/img/centro-pareja-grande.webp</image:loc>
       <image:title>Munay Suyu bailando cueca - grupo folclórico chileno</image:title>
     </image:image>
   </url>
   
   <!-- Sección Cuadros -->
   <url>
-    <loc>https://munaysuyu.cl#cuadros</loc>
+    <loc>https://www.munaysuyu.cl#cuadros</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://munaysuyu.cl/assets/img/grupo-norte-grande.webp</image:loc>
+      <image:loc>https://www.munaysuyu.cl/assets/img/grupo-norte-grande.webp</image:loc>
       <image:title>Zona Norte - Cuadro del grupo folclórico Munay Suyu</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://munaysuyu.cl/assets/img/huasos-grande.webp</image:loc>
+      <image:loc>https://www.munaysuyu.cl/assets/img/huasos-grande.webp</image:loc>
       <image:title>Zona Central - Cuadro del grupo folclórico Munay Suyu</image:title>
     </image:image>
   </url>
   
   <!-- Sección Presentaciones -->
   <url>
-    <loc>https://munaysuyu.cl#presentaciones</loc>
+    <loc>https://www.munaysuyu.cl#presentaciones</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -51,7 +51,7 @@
   
   <!-- Sección Galería -->
   <url>
-    <loc>https://munaysuyu.cl#galeria</loc>
+    <loc>https://www.munaysuyu.cl#galeria</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -59,7 +59,7 @@
   
   <!-- Sección Servicios / Contrátanos -->
   <url>
-    <loc>https://munaysuyu.cl#servicios</loc>
+    <loc>https://www.munaysuyu.cl#servicios</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -67,7 +67,7 @@
   
   <!-- Sección Postular -->
   <url>
-    <loc>https://munaysuyu.cl#postular</loc>
+    <loc>https://www.munaysuyu.cl#postular</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -75,7 +75,7 @@
   
   <!-- Sección Contacto -->
   <url>
-    <loc>https://munaysuyu.cl#contacto</loc>
+    <loc>https://www.munaysuyu.cl#contacto</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
