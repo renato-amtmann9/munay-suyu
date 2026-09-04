@@ -328,13 +328,19 @@ svg{ fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; strok
 }
 @media (max-width:640px){
   /* en el teléfono, una sola columna, conviene que la foto llene todo el
-     alto en vez de dejar franjas vacías arriba/abajo — vuelve a "cover". */
-  .hero{ background-size:100% 100%, cover; background-position:0 0, 72% 26%; background-image:
-    linear-gradient(180deg, rgba(250,243,231,.4) 0%, rgba(250,243,231,.32) 45%, rgba(250,243,231,.5) 100%),
+     alto en vez de dejar franjas vacías arriba/abajo — vuelve a "cover".
+     La capa clara sube un poco más que en escritorio (acá el texto se
+     apila arriba de toda la foto, no al lado) para que se lea perfecto
+     sin perder el color y la calidez de fondo. */
+  .hero{ background-size:100% 100%, cover; background-position:0 0, 80% 22%; background-image:
+    linear-gradient(180deg,
+      rgba(250,243,231,.72) 0%, rgba(250,243,231,.64) 30%,
+      rgba(250,243,231,.68) 60%, rgba(250,243,231,.78) 100%),
     url("../assets/img/hero-fonda-640.webp"); }
-  .hero__titulo b{ text-shadow:0 2px 18px rgba(250,243,231,.9), 0 14px 30px rgba(179,27,36,.18); }
-  .hero__lema p{ text-shadow:0 1px 10px rgba(250,243,231,.95); }
-  .hero__bajada{ text-shadow:0 1px 8px rgba(250,243,231,.85); }
+  .hero__titulo b{ text-shadow:0 2px 20px rgba(250,243,231,1), 0 1px 0 rgba(250,243,231,.9), 0 14px 30px rgba(179,27,36,.18); }
+  .hero__lema p{ text-shadow:0 1px 12px rgba(250,243,231,1), 0 1px 0 rgba(250,243,231,.9); }
+  .hero__bajada{ color:var(--tinta); text-shadow:0 1px 10px rgba(250,243,231,1), 0 1px 0 rgba(250,243,231,.9); }
+  .hero__accion-frase{ text-shadow:0 1px 8px rgba(250,243,231,1); }
 }
 .hero__guarda{ position:absolute; left:0; right:0; height:26px; background-image:var(--guarda-oro); background-repeat:repeat-x; opacity:.6; z-index:2; }
 .hero__guarda--sup{ top:calc(var(--nav-h) - 4px); }
