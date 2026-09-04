@@ -409,7 +409,6 @@ mostrarZona("norte");
       '<article class="func' + acentos[i % acentos.length] + '">' +
         '<div class="func__top"><span class="func__hora">' + p.hora + ' hrs</span><span class="func__ico">✦</span></div>' +
         '<h3>' + p.lugar + '</h3>' +
-        '<span class="func__tag">Función de folclor</span>' +
       '</article>';
     i++;
   });
