@@ -1,0 +1,19 @@
+# Robots.txt para Munay Suyu - Grupo Folclórico Chileno
+# https://munaysuyu.cl
+
+User-agent: *
+Allow: /
+Disallow: /js/
+Disallow: /css/
+Crawl-delay: 1
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+
+# Sitemap
+Sitemap: https://munaysuyu.cl/sitemap.xml
