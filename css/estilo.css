@@ -525,18 +525,31 @@ svg{ fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; strok
 /* ═══════════════════════════════════════════════════════════
    PRESENTACIONES
    ═══════════════════════════════════════════════════════════ */
-.presentaciones{ display:flex; flex-direction:column; }
-.presentaciones__grupo{
-  display:grid; grid-template-columns:112px 1fr; gap:26px; align-items:start;
-  padding:26px 0;
+/* los días van uno al lado del otro — para ver los siguientes se
+   desplaza al costado; dentro de cada día, las funciones van hacia
+   abajo (ver .presentaciones__tarjetas más abajo). */
+.presentaciones{
+  display:flex; gap:18px; align-items:stretch;
+  overflow-x:auto; overflow-y:hidden; scroll-snap-type:x proximity;
+  padding-bottom:18px; margin-bottom:-18px;
+  -webkit-overflow-scrolling:touch;
 }
-.presentaciones__grupo:first-child{ padding-top:0; }
-.presentaciones__grupo + .presentaciones__grupo{ border-top:1px dashed rgba(179,27,36,.2); }
-.presentaciones__fecha{ display:flex; align-items:center; gap:12px; position:sticky; top:calc(var(--nav-h) + 24px); }
-.presentaciones__dia{ font-family:var(--display); font-size:2.7rem; font-weight:900; line-height:1; color:var(--rojo); }
+.presentaciones__grupo{
+  flex:0 0 auto; width:min(78vw,300px); scroll-snap-align:start;
+  display:flex; flex-direction:column; gap:16px;
+  padding:22px; border-radius:16px;
+  background:var(--papel); border:1px solid rgba(179,27,36,.12);
+  box-shadow:0 14px 30px -22px rgba(42,26,21,.3);
+}
+.presentaciones__fecha{ display:flex; align-items:center; gap:12px; flex:none; }
+.presentaciones__dia{ font-family:var(--display); font-size:2.4rem; font-weight:900; line-height:1; color:var(--rojo); }
 .presentaciones__fecha div{ display:grid; }
 .presentaciones__fecha strong{ font-size:13px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--tinta); }
 .presentaciones__fecha small{ margin-top:3px; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--tinta-2); }
+/* pista de scroll horizontal, delgada y a tono */
+.presentaciones::-webkit-scrollbar{ height:8px; }
+.presentaciones::-webkit-scrollbar-track{ background:rgba(179,27,36,.08); border-radius:99px; }
+.presentaciones::-webkit-scrollbar-thumb{ background:var(--oro); border-radius:99px; }
 /* lista vertical: una función por fila, no una grilla que obliga a
    desplazarse de lado — así el espacio se aprovecha mejor. */
 .presentaciones__tarjetas{ display:flex; flex-direction:column; gap:10px; }
@@ -841,9 +854,8 @@ svg{ fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; strok
   .zona-panel{ grid-column:1 / -1; grid-row:2; }
   .zona-panel__foto{ border-width:4px; }
 
-  /* ── PRESENTACIONES: la fecha pasa arriba de sus tarjetas ── */
-  .presentaciones__grupo{ grid-template-columns:1fr; gap:12px; }
-  .presentaciones__fecha{ position:relative; top:auto; }
+  /* ── PRESENTACIONES: tarjetas de día más angostas en el teléfono ── */
+  .presentaciones__grupo{ width:min(84vw,260px); padding:18px; }
   .func{ padding:12px 14px; gap:12px; }
   .func__top{ flex-basis:70px; }
   .func__hora{ font-size:1rem; }
