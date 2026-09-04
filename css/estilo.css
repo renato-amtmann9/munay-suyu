@@ -295,13 +295,15 @@ svg{ fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; strok
 .hero{
   position:relative; min-height:100svh; padding:calc(var(--nav-h) + 40px) 0 70px;
   display:flex; align-items:center; overflow:hidden;
-  background:
+  background-color:var(--crema-2);
+  background-image:
     linear-gradient(100deg,
       rgba(250,243,231,.95) 0%, rgba(250,243,231,.88) 26%,
       rgba(250,243,231,.55) 46%, rgba(250,243,231,.16) 62%, rgba(250,243,231,0) 74%),
     url("../assets/img/hero-fonda-1920.webp");
-  background-size:100% 100%, cover;
-  background-position:0 0, 64% 38%;
+  /* contain: se ve la foto completa, tal como es — nada se recorta */
+  background-size:100% 100%, contain;
+  background-position:0 0, center center;
   background-repeat:no-repeat, no-repeat;
 }
 @media (min-width:1921px){
@@ -311,17 +313,23 @@ svg{ fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; strok
       rgba(250,243,231,.55) 46%, rgba(250,243,231,.16) 62%, rgba(250,243,231,0) 74%),
     url("../assets/img/hero-fonda-2600.webp"); }
 }
+@media (max-width:1300px) and (min-width:901px){
+  /* zona angosta: el texto se apretuja contra la foto y el bloque crece
+     mucho más alto que ancho — "contain" dejaría franjas vacías feas acá,
+     así que se recorta como en el teléfono en vez de dejar esa foto chica. */
+  .hero{ background-size:100% 100%, cover; background-position:0 0, 62% 36%; }
+}
 @media (max-width:900px){
-  .hero{ background-image:
+  .hero{ background-size:100% 100%, cover; background-position:0 0, 64% 36%; background-image:
     linear-gradient(100deg,
       rgba(250,243,231,.95) 0%, rgba(250,243,231,.88) 26%,
       rgba(250,243,231,.55) 46%, rgba(250,243,231,.16) 62%, rgba(250,243,231,0) 74%),
     url("../assets/img/hero-fonda-1280.webp"); }
 }
 @media (max-width:640px){
-  /* la foto se ve tan viva como en escritorio: solo una capa liviana,
-     apoyada con una sombra suave en el texto para que siga leyéndose. */
-  .hero{ background-position:0 0, 72% 26%; background-image:
+  /* en el teléfono, una sola columna, conviene que la foto llene todo el
+     alto en vez de dejar franjas vacías arriba/abajo — vuelve a "cover". */
+  .hero{ background-size:100% 100%, cover; background-position:0 0, 72% 26%; background-image:
     linear-gradient(180deg, rgba(250,243,231,.4) 0%, rgba(250,243,231,.32) 45%, rgba(250,243,231,.5) 100%),
     url("../assets/img/hero-fonda-640.webp"); }
   .hero__titulo b{ text-shadow:0 2px 18px rgba(250,243,231,.9), 0 14px 30px rgba(179,27,36,.18); }
