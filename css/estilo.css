@@ -550,6 +550,12 @@ svg{ fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; strok
 .presentaciones::-webkit-scrollbar{ height:8px; }
 .presentaciones::-webkit-scrollbar-track{ background:rgba(179,27,36,.08); border-radius:99px; }
 .presentaciones::-webkit-scrollbar-thumb{ background:var(--oro); border-radius:99px; }
+.presentaciones__pista{
+  margin:10px 0 0; text-align:center;
+  font-size:12.5px; font-weight:700; letter-spacing:.04em; color:var(--rojo);
+}
+.presentaciones__pista span{ display:inline-block; margin-left:3px; animation:pistaFlecha 1.6s ease-in-out infinite; }
+@keyframes pistaFlecha{ 0%,100%{ transform:translateX(0); } 50%{ transform:translateX(4px); } }
 /* lista vertical: una función por fila, no una grilla que obliga a
    desplazarse de lado — así el espacio se aprovecha mejor. */
 .presentaciones__tarjetas{ display:flex; flex-direction:column; gap:10px; }
