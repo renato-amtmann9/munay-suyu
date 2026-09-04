@@ -319,10 +319,14 @@ svg{ fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; strok
     url("../assets/img/hero-fonda-1280.webp"); }
 }
 @media (max-width:640px){
-  /* en una columna el texto ocupa todo el alto: capa pareja, no direccional */
-  .hero{ background-position:0 0, 72% 30%; background-image:
-    linear-gradient(rgba(250,243,231,.93), rgba(250,243,231,.93)),
+  /* la foto se ve tan viva como en escritorio: solo una capa liviana,
+     apoyada con una sombra suave en el texto para que siga leyéndose. */
+  .hero{ background-position:0 0, 72% 26%; background-image:
+    linear-gradient(180deg, rgba(250,243,231,.4) 0%, rgba(250,243,231,.32) 45%, rgba(250,243,231,.5) 100%),
     url("../assets/img/hero-fonda-640.webp"); }
+  .hero__titulo b{ text-shadow:0 2px 18px rgba(250,243,231,.9), 0 14px 30px rgba(179,27,36,.18); }
+  .hero__lema p{ text-shadow:0 1px 10px rgba(250,243,231,.95); }
+  .hero__bajada{ text-shadow:0 1px 8px rgba(250,243,231,.85); }
 }
 .hero__guarda{ position:absolute; left:0; right:0; height:26px; background-image:var(--guarda-oro); background-repeat:repeat-x; opacity:.6; z-index:2; }
 .hero__guarda--sup{ top:calc(var(--nav-h) - 4px); }
