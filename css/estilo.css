@@ -115,7 +115,8 @@ svg{ fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; strok
   overflow:hidden; isolation:isolate;
 }
 .btn svg{ width:19px; height:19px; flex:none; }
-.btn .ico-wa{ stroke-width:1.8; }
+/* glifo oficial de WhatsApp: es un ícono relleno, no un contorno */
+.ico-wa{ fill:currentColor; stroke:none; }
 .btn::before{
   content:""; position:absolute; inset:0; z-index:-1;
   background:linear-gradient(120deg,var(--oro),var(--naranja-2),var(--rojo));
@@ -721,7 +722,7 @@ svg{ fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; strok
 }
 .wa-flotante.visible{ opacity:1; pointer-events:auto; }
 .wa-flotante:hover{ transform:scale(1.12) rotate(-8deg); }
-.wa-flotante svg{ width:28px; height:28px; stroke-width:1.7; }
+.wa-flotante svg{ width:28px; height:28px; fill:currentColor; stroke:none; }
 .wa-flotante__pulso{ position:absolute; inset:0; border-radius:50%; box-shadow:0 0 0 0 rgba(37,211,102,.55); animation:pulsoWa 2.4s infinite; }
 @keyframes pulsoWa{ 70%{ box-shadow:0 0 0 20px rgba(37,211,102,0) } 100%{ box-shadow:0 0 0 0 rgba(37,211,102,0) } }
 
